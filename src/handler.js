@@ -72,7 +72,7 @@ const getAllBooksHandler = (request, h) => {
   }
 
   if (name !== undefined) {
-    filteredBooks = books.filter((book) => book.name.toLowerCase().includes('dicoding'));
+    filteredBooks = books.filter((book) => book.name.toLowerCase().includes('Dicoding'));
   }
 
   if (filteredBooks.length > 0) {
@@ -94,7 +94,7 @@ const getAllBooksHandler = (request, h) => {
       errorMessage = 'Parameter reading yang diminta tidak sesuai';
     } else if (finished !== undefined && (finished !== '0' && finished !== '1')) {
       errorMessage = 'Parameter finished yang diminta tidak sesuai';
-    } else if (search !== undefined) {
+    } else if (name !== undefined) {
       errorMessage = 'Tidak ada buku yang ditemukan dengan nama yang mengandung "Dicoding"';
     } else {
       errorMessage = 'Tidak ada buku yang ditemukan';
